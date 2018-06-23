@@ -66,7 +66,6 @@ def get_patient_count_and_dates(patients):
         if i == 0:
             current_date = patients[i].treatment_start_date
             continue
-        # print(type(current_date))
         if current_date.day == patients[i].treatment_start_date.day and \
                         current_date.year == patients[i].treatment_start_date.year and \
                         current_date.month == patients[i].treatment_start_date.month:
@@ -85,7 +84,6 @@ if __name__ == '__main__':
                                if not func[0].startswith('_')]
     # patient_count_and_dates = get_patient_count_and_dates(data[0])
     # all_patient_measurements = patient_count_and_dates[0]
-    # print([m[0] for m in all_measurement_methods])
     is_None = False
 
     for methods in powerset(all_measurement_methods):
@@ -106,7 +104,6 @@ if __name__ == '__main__':
             else:
                 is_None = False
         input_data = np.array(input_data)
-        # print(input_data, target)
         X_train = []
         Y_train = []
         X_test = []
